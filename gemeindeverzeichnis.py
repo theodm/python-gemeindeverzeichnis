@@ -243,14 +243,20 @@ class ADReader(object):
         Returns all entries in a dictionary indexed by the Regionalschlüssel.
         """
         self.list = []
-        f = open(self.filename, 'r', 'cp850')
+
+        f = open(self.filename, 'r', 'utf-8')
+
         for line in f:
+            print(line)
             t = line[0:2]
             self.handlers[t](line)
+
         if self._do_remove_bogus_gv:
             self._remove_bogus_gv(self.index)
         l = self.index
+
         self.index = None
+
         return l
 
     def _remove_bogus_gv(self, index):
@@ -321,7 +327,7 @@ class ADReader(object):
             return
         name = line[22:72].strip()
         sl = line[72:122].strip()
-        typ = int(line[122:124])
+        typ = int(line[122:124]) if line[122:124].strip() != '' else None
         k = Kreis(rs=rs, name=name, gebietsstand=stand, sitz_verwaltung=sl, typ=typ)
 
         # Region?
@@ -344,7 +350,7 @@ class ADReader(object):
             return
         name = line[22:72].strip()
         sl = line[72:122].strip()
-        typ = int(line[122:124])
+        typ = int(line[122:124]) if line[122:124].strip() != '' else None
         gv = Gemeindeverband(rs=rs, name=name, gebietsstand=stand, sitz_verwaltung=sl, typ=typ)
         
         if gv.rs[0:5] in self.index:
@@ -363,7 +369,7 @@ class ADReader(object):
         ags = line[10:15]+line[15:18]
         name = line[22:72].strip()
         sl = line[72:122].strip()
-        typ = int(line[122:124])
+        typ = int(line[122:124]) if line[122:124].strip() != '' else None
         gem = Gemeinde(rs=rs, ags=ags, name=name, gebietsstand=stand, typ=typ)
         gem.bevoelkerung = int(line[139:150].strip())
         gem.maennlich = int(line[150:161].strip())
@@ -387,7 +393,7 @@ class ADReader(object):
 def main(argv):
     result = ADReader(argv[0]).read()
     from pprint import pprint
-    pprint(result['081155002013'])
+    pprint(result)
 
 if __name__ == '__main__':
     import sys
