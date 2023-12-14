@@ -20,7 +20,7 @@ class GV100ADParser:
     # herzustellen.
     #
     # Key ist der Regionalschlüssel, Value ist der Datensatz vom Typ der Objekte
-    # TODO
+    # RSObject, Land, Regierungsbezirk, Region, Kreis, Gemeindeverband oder Gemeinde.
     index = {}
 
     # Hier werden alle Datensätze in der Reihenfolge ihres Auftretens
