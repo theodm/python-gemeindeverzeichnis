@@ -1,6 +1,6 @@
-from enums.satzarten import LAND_LEVEL
-from objects.DerivedBevoelkerungMixin import DerivedBevoelkerungMixin
-from objects.RSObject import RSObject
+from gemeindeverzeichnis.enums.satzarten import LAND_LEVEL
+from gemeindeverzeichnis.objects.DerivedBevoelkerungMixin import DerivedBevoelkerungMixin
+from gemeindeverzeichnis.objects.RSObject import RSObject
 
 
 class Land(RSObject, DerivedBevoelkerungMixin):

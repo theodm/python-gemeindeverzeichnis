@@ -1,6 +1,6 @@
-from enums.satzarten import REGIERUNGSBEZIRK_LEVEL
-from objects.DerivedBevoelkerungMixin import DerivedBevoelkerungMixin
-from objects.RSObject import RSObject
+from gemeindeverzeichnis.enums.satzarten import REGIERUNGSBEZIRK_LEVEL
+from gemeindeverzeichnis.objects.DerivedBevoelkerungMixin import DerivedBevoelkerungMixin
+from gemeindeverzeichnis.objects.RSObject import RSObject
 
 
 class Regierungsbezirk(RSObject, DerivedBevoelkerungMixin):

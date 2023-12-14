@@ -1,4 +1,4 @@
-from gemeindeverzeichnis import load_gemeindeverzeichnis
+from gemeindeverzeichnis.gemeindeverzeichnis import load_gemeindeverzeichnis
 
 def test_load_gemeindeverzeichnis():
     gemeindeverzeichnis = load_gemeindeverzeichnis()

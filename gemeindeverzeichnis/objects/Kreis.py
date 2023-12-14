@@ -1,7 +1,7 @@
-from enums.kreistypen import kreistyp_string
-from enums.satzarten import KREIS_LEVEL
-from objects.DerivedBevoelkerungMixin import DerivedBevoelkerungMixin
-from objects.RSObject import RSObject
+from gemeindeverzeichnis.enums.kreistypen import kreistyp_string
+from gemeindeverzeichnis.enums.satzarten import KREIS_LEVEL
+from gemeindeverzeichnis.objects.DerivedBevoelkerungMixin import DerivedBevoelkerungMixin
+from gemeindeverzeichnis.objects.RSObject import RSObject
 
 
 class Kreis(RSObject, DerivedBevoelkerungMixin):

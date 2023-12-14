@@ -1,6 +1,6 @@
 import os
 
-from GV100ADParser import GV100ADParser
+from gemeindeverzeichnis.GV100ADParser import GV100ADParser
 
 def load_gemeindeverzeichnis(filename: str | None=None, ignore_redundant_gemeindeverbaende=True):
     if filename is None:

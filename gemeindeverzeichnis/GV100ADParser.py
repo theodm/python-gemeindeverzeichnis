@@ -1,14 +1,14 @@
 from datetime import date
 
-from enums.satzarten import LAND_LEVEL, REGIERUNGSBEZIRK_LEVEL, REGION_LEVEL, KREIS_LEVEL, GEMEINDEVERBAND_LEVEL, \
+from gemeindeverzeichnis.enums.satzarten import LAND_LEVEL, REGIERUNGSBEZIRK_LEVEL, REGION_LEVEL, KREIS_LEVEL, GEMEINDEVERBAND_LEVEL, \
     GEMEINDE_LEVEL
-from objects.Gemeinde import Gemeinde
-from objects.Gemeindeverband import Gemeindeverband
-from objects.Kreis import Kreis
-from objects.Land import Land
-from objects.Regierungsbezirk import Regierungsbezirk
-from objects.Region import Region
-from parse_utils import int_or_none
+from gemeindeverzeichnis.objects.Gemeinde import Gemeinde
+from gemeindeverzeichnis.objects.Gemeindeverband import Gemeindeverband
+from gemeindeverzeichnis.objects.Kreis import Kreis
+from gemeindeverzeichnis.objects.Land import Land
+from gemeindeverzeichnis.objects.Regierungsbezirk import Regierungsbezirk
+from gemeindeverzeichnis.objects.Region import Region
+from gemeindeverzeichnis.parse_utils import int_or_none
 
 
 class GV100ADParser:

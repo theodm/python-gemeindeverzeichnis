@@ -1,6 +1,6 @@
-from enums.gemeindetypen import gemeindetyp_string
-from enums.satzarten import GEMEINDE_LEVEL
-from objects.RSObject import RSObject
+from gemeindeverzeichnis.enums.gemeindetypen import gemeindetyp_string
+from gemeindeverzeichnis.enums.satzarten import GEMEINDE_LEVEL
+from gemeindeverzeichnis.objects.RSObject import RSObject
 
 class Gemeinde(RSObject):
 

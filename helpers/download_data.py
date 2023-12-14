@@ -6,7 +6,7 @@ import urllib.request
 import zipfile
 
 TEMP_DIR = "temp"
-DATA_DIR = "../data"
+DATA_DIR = "../gemeindeverzeichnis/data"
 DOWNLOAD_URL = "https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/Archiv/GV100ADQ/GV100AD3011.zip?__blob=publicationFile"
 
 # Altes temporäres Verzeichnis löschen, falls
@@ -32,7 +32,7 @@ for file in os.listdir("temp"):
 
 # Und in unser Datenverzeichnis schieben.
 for file in os.listdir("temp"):
-    os.rename(os.path.join("temp", file), os.path.join("../data", file))
+    os.rename(os.path.join("temp", file), os.path.join("../gemeindeverzeichnis/data", file))
 
 # Temporäres Verzeichnis löschen
 os.rmdir("temp")

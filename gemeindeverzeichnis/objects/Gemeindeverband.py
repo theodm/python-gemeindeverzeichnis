@@ -1,7 +1,7 @@
-from enums.satzarten import GEMEINDEVERBAND_LEVEL
-from enums.verbandstypen import verbandstyp_string
-from objects.DerivedBevoelkerungMixin import DerivedBevoelkerungMixin
-from objects.RSObject import RSObject
+from gemeindeverzeichnis.enums.satzarten import GEMEINDEVERBAND_LEVEL
+from gemeindeverzeichnis.enums.verbandstypen import verbandstyp_string
+from gemeindeverzeichnis.objects.DerivedBevoelkerungMixin import DerivedBevoelkerungMixin
+from gemeindeverzeichnis.objects.RSObject import RSObject
 
 
 class Gemeindeverband(RSObject, DerivedBevoelkerungMixin):
