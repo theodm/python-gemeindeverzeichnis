@@ -3,7 +3,6 @@
 MANIFEST
 /dist
 /build
-/data
 /helpers/data
 /gemeindeverzeichnis.egg-info
 /.idea
