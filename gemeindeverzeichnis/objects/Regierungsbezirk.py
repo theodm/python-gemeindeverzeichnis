@@ -14,3 +14,23 @@ class Regierungsbezirk(RSObject, DerivedBevoelkerungMixin):
 
     def __repr__(self):
         return "<Regierungsbezirk: %r %r %r>" % (self.rs, self.name, self.sitz_verwaltung)
+
+    name: str
+    sitz_verwaltung: str
+    level: int
+
+    # from DerivedBevoelkerungMixin:
+    #
+    # bevoelkerung: int
+    # maennlich: int
+    # weiblich: int
+    #
+
+    # from RSObject:
+    #
+    # rs: str
+    # ags: str
+    # gebietsstand: int
+    #
+    # parent: RSObject | None
+    # children: RSObject[]

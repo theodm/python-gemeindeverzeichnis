@@ -3,7 +3,6 @@ from gemeindeverzeichnis.enums.verbandstypen import verbandstyp_string
 from gemeindeverzeichnis.objects.DerivedBevoelkerungMixin import DerivedBevoelkerungMixin
 from gemeindeverzeichnis.objects.RSObject import RSObject
 
-
 class Gemeindeverband(RSObject, DerivedBevoelkerungMixin):
     def __init__(self, rs=None, gebietsstand=None,
                  name=None, sitz_verwaltung=None, typ=None):

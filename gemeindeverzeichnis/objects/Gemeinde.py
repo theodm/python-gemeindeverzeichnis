@@ -3,7 +3,6 @@ from gemeindeverzeichnis.enums.satzarten import GEMEINDE_LEVEL
 from gemeindeverzeichnis.objects.RSObject import RSObject
 
 class Gemeinde(RSObject):
-
     def __init__(self, ags=None, rs=None, gebietsstand=None,
                  name=None, typ=None):
         RSObject.__init__(self, ags, rs, gebietsstand)
@@ -19,15 +18,10 @@ class Gemeinde(RSObject):
         return self.flaeche / 10
     def _get_typ_string(self):
         return gemeindetyp_string(self.typ)
-
-
     def _get_weiblich(self):
         return self.bevoelkerung - self.maennlich
-
-
     def __repr__(self):
         return "<Gemeinde: %r %r %r %r %r %r >" % (self.rs, self.ags, self.name, gemeindetyp_string(self.typ), self.flaeche, self.bevoelkerung)
-
 
     name: str
 
@@ -52,6 +46,15 @@ class Gemeinde(RSObject):
     plzeindeutig: bool
 
     bundestagswahlkreis: tuple[int | None, int | None]
+
+    # from RSObject:
+    #
+    # rs: str
+    # ags: str
+    # gebietsstand: int
+    #
+    # parent: RSObject | None
+    # children: RSObject[]
 
 
 
