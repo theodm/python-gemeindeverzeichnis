@@ -5,7 +5,7 @@ def test_load_gemeindeverzeichnis():
     gemeindeverzeichnis = load_gemeindeverzeichnis()
 
     assert "064140000000" in gemeindeverzeichnis
-    assert len(gemeindeverzeichnis) == 11307
+    assert len(gemeindeverzeichnis) == 12643
 
 def test_bundesland():
     gemeindeverzeichnis = load_gemeindeverzeichnis()
