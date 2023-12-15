@@ -39,6 +39,7 @@ class Kreis(RSObject, DerivedBevoelkerungMixin):
     # rs: str
     # ags: str
     # gebietsstand: int
+    # bundesland: Bundesland
     #
     # parent: RSObject | None
     # children: RSObject[]

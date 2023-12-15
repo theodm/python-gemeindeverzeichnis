@@ -1,3 +1,4 @@
+from gemeindeverzeichnis.enums.bundesland import Bundesland
 from gemeindeverzeichnis.enums.gemeindetypen import gemeindetyp_string
 from gemeindeverzeichnis.enums.satzarten import GEMEINDE_LEVEL
 from gemeindeverzeichnis.objects.RSObject import RSObject
@@ -52,6 +53,7 @@ class Gemeinde(RSObject):
     # rs: str
     # ags: str
     # gebietsstand: int
+    # bundesland: Bundesland
     #
     # parent: RSObject | None
     # children: RSObject[]
