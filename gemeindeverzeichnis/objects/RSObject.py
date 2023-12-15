@@ -1,6 +1,8 @@
 from __future__ import annotations
 from datetime import date
 
+from gemeindeverzeichnis.enums.bundesland import Bundesland
+
 class RSObject(object):
     def __init__(self, ags=None, rs=None, gebietsstand=None):
         self.ags = ags
@@ -17,6 +19,10 @@ class RSObject(object):
     def remove_child(self, obj):
         self.children.remove(obj)
         obj.parent = None
+
+    def _get_bundesland(self):
+        return Bundesland.from_ags_or_rgs(self.rs)
+
 
     # 8-stelliger Schlüssel zur eindeutigen Identifizierung einer Gemeinde mit den Bestandteilen:
     #
@@ -40,8 +46,11 @@ class RSObject(object):
     # https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Glossar/regionalschluessel.html
     rs: str
 
-    # Gebietsstand: Datum, zu dem die Gemeinde in der angegebenen Abgrenzung gültig ist.
+    # Gebietsstand: Stand des Datensatzes.
     gebietsstand: date
+
+    # Bundesland: Bundesland, in dem das Gebiet liegt.
+    bundesland: Bundesland = property(_get_bundesland)
 
     parent: RSObject | None
     children: list[RSObject]
